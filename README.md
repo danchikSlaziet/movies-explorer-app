@@ -1,1 +1,1 @@
-# movies-explorer-app
+# movies-explorer-full

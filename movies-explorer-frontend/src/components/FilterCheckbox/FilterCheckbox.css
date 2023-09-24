@@ -1,0 +1,74 @@
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+/* как по БЭМ стилизовать чекбокс я не знаю */
+.filter__text {
+  font-size: 13px;
+  line-height: 18px;
+  transition: opacity .24s linear;
+}
+
+.filter__text:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter__text {
+    font-size: 11px;
+  }
+}
+
+.filter__checkbox:checked+.filter__text::after {
+  background-image: url(../../images/smalltumb-on.svg);
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+  margin-left: 14px;
+}
+
+.filter__checkbox:not(:checked)+.filter__text::after {
+  background-image: url(../../images/smalltumboff.svg);
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .filter__checkbox:checked+.filter__text::after {
+    margin-left: 12px;
+  }
+
+  .filter__checkbox:not(:checked)+.filter__text::after {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter__checkbox:checked+.filter__text::after {
+    margin-left: 13px;
+  }
+
+  .filter__checkbox:not(:checked)+.filter__text::after {
+    margin-left: 13px;
+  }
+}

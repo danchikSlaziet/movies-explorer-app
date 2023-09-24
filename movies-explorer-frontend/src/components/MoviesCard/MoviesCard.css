@@ -1,0 +1,132 @@
+.film-banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  fill: #222;
+  filter: drop-shadow(0px 16px 10px rgba(0, 0, 0, 0.05));
+  background-color: #222222;
+  border-radius: 10px;
+}
+
+.movie-cards__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.film-banner__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+}
+
+.film-banner__img {
+  display: block;
+  width: 100%;
+  height: 151px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px 10px 0 0;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .film-banner__img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .film-banner__img {
+    height: 190px;
+  }
+}
+
+
+@media screen and (max-width: 767.98px) {
+  .film-banner__img {
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .film-banner__img {
+    height: 168px;
+  }
+}
+
+.film-banner__img:hover {
+  cursor: pointer;
+}
+
+.film-banner__name {
+  display: block;
+  max-width: 206px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .film-banner__name {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .film-banner__name {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .film-banner__name {
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .film-banner__name {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .film-banner__name {
+    max-width: 206px;
+  }
+}
+
+.film-banner__duration {
+  display: block;
+  color: #8B8B8B;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.film-banner__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: opacity .24s linear;
+}
+
+.film-banner__button:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.film-banner__svg {
+  display: block;
+}
+
+.film-banner__wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 14px 12px;
+}
